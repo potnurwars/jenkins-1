@@ -1,0 +1,22 @@
+apiVersion: app/v1
+metadata:
+  name: cp-project2
+kind: Deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: cpproject2
+  template:
+    metadata:
+      labels:
+        app: cpproject2
+    spec:
+      containers:
+        - name: cpproject2-app
+          image: maheshchabi/cpproject2
+          ports:
+            - containerPort: 80
+
+
+
