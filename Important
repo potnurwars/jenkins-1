@@ -1,0 +1,3 @@
+#sudo docker rm -f c1
+sudo docker build /home/ubuntu/jenkins/workspace/Job -t job 
+sudo docker run -itd -p 83:80 --name=c1 job
